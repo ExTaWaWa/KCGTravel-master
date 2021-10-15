@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 高雄旅遊資訊
+    link(rel="stylesheet", href="css/main.css")
+  body 
+    .wrap 
+      .kaoxiong
+        header.header#header 
+          h1 高雄旅遊資訊
+          select#location.location(name="location") 
+            option(value="---請選擇區域---") ---請選擇區域---
+          .hotLocation
+            h2 熱門區域 
+            .flexCenter
+              button 鳳山區
+              button 前鎮區
+              button 美濃區
+              button 小港區
+        main.showLocation
+          h3.placeTitle
+          ul.placeList 
+          .pageNumber 
+        footer
+          h3 高雄旅遊網 
+          h3 資料來源：高雄市政府
