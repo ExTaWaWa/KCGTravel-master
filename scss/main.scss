@@ -322,6 +322,7 @@ header {
     .text {
       position: absolute;
       top: 100px;
+      width: 100%;
 
       h3 {
         position: relative;
@@ -329,14 +330,16 @@ header {
         left: 20px;
         font-size: 24px;
         color: #fff;
+        text-align: left;
       }
 
       h4 {
         position: relative;
-        left: 400px;
+        right: 20px;
         bottom: 0;
         color: #fff;
         font-size: 16px;
+        text-align: right;
       }
     }
 
@@ -416,5 +419,6 @@ footer {
     right: 80px;
     width: 24px;
     height: 24px;
+    opacity: 0;
   }
 }
