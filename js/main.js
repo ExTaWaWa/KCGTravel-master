@@ -3215,8 +3215,19 @@ function listUpdate(p) {
     }
   }
   placeList.innerHTML = str;
-  placeTitle.textContent = p.target.value;
+  if (p.target.value === "全部") {
+    listAll();
+  } else {
+    placeTitle.textContent = p.target.value;
+  }
 }
+
+// function matchHotPlace(t){
+//   listUpdate();
+//   if (t.target.value === "") {
+    
+//   }
+// }
 
 updateLocation();
 listAll();
