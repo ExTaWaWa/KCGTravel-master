@@ -3157,7 +3157,7 @@ function updateLocation() {
 
   for (let i = 0; i < len; i++) {
     str += `<option value="${obj[i].Zone}">${obj[i].Zone}</option>`
-    locations.innerHTML = `<option value='請選擇行政區'> ---請選擇區域--- </option>${str}`;
+    locations.innerHTML = `<option value='請選擇行政區'> ---請選擇區域--- </option><option value='全部'> 全部 </option>${str}`;
   }
 }
 
