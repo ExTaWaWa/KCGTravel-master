@@ -3145,8 +3145,10 @@ let data = {
     "total": 268
   }
 };
+//資料物件改取內部局部變陣列
 data = data.result.records;
 
+// 刷新 Select 內部 Option 過濾陣列中重複
 function updateLocation() {
   let str = '';
   let set = new Set();
@@ -3159,6 +3161,7 @@ function updateLocation() {
   }
 }
 
+// 列出陣列中所有高雄的景點資料
 function listAll() {
   let str = '';
   let len = data.length;
@@ -3188,6 +3191,7 @@ function listAll() {
   console.log(typeof data);
 }
 
+// 刷新 ul 內部所有 li 變成所選景點的內容
 function listUpdate(p) {
   let str = '';
   let len = data.length;
@@ -3214,6 +3218,8 @@ function listUpdate(p) {
         </li>`
     }
   }
+
+  // 判定是不是選擇全部顯示，不是就填入地名到標頭
   placeList.innerHTML = str;
   if (p.target.value === "全部") {
     listAll();
@@ -3229,19 +3235,23 @@ function listUpdate(p) {
 //   }
 // }
 
+// 網頁初始化載入select裡面的option選項與所有高雄景點資料
 updateLocation();
 listAll();
 
+// 監聽 select、四個按鈕、回頂部按鈕
 locations.addEventListener('change', listUpdate);
 Array.from(buttons).forEach(button => button.addEventListener("click", listUpdate));
 backBtn.addEventListener('click', scrollTop);
 
+// GSAP製作自動上捲動畫效果
 function scrollTop() {
   gsap.to(window, {
     scrollTo: 0
   });
 }
 
+// GSAP製作 back to top 按鈕何時出現的捲動高度判斷與出現效果
 gsap.set('.backBtn', {
   y: 50
 });
